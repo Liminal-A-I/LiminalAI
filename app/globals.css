@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    filter: brightness(100%) blur(8px);
+  }
+  50% {
+    filter: brightness(150%) blur(12px);
+  }
+}
+
+@keyframes matrix-rain {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -100%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.5s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-slideDown {
+  animation: slideDown 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.matrix-rain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg,
+    transparent 0%,
+    rgba(32, 196, 88, 0.05) 50%,
+    transparent 100%
+  );
+  animation: matrix-rain 20s linear infinite;
+  background-size: 100% 200%;
+}
+
+.matrix-rain::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(32, 196, 88, 0.05) 50%,
+    transparent 100%
+  );
+  animation: matrix-rain 15s linear infinite;
+  animation-delay: -7.5s;
+  background-size: 200% 100%;
+}
+
+/* Circuit board pattern */
+.circuit-pattern {
+  background-image: 
+    radial-gradient(circle at 100% 150%, #304050 24%, #243040 25%, #243040 28%, #304050 29%, #304050 36%, #243040 36%, #243040 40%, transparent 40%, transparent),
+    radial-gradient(circle at 0 150%, #304050 24%, #243040 25%, #243040 28%, #304050 29%, #304050 36%, #243040 36%, #243040 40%, transparent 40%, transparent),
+    radial-gradient(circle at 50% 100%, #243040 10%, #304050 11%, #304050 23%, #243040 24%, #243040 30%, #304050 31%, #304050 43%, #243040 44%, #243040 50%, #304050 51%, #304050 63%, #243040 64%, #243040 71%, transparent 71%, transparent),
+    radial-gradient(circle at 100% 50%, #243040 5%, #304050 6%, #304050 15%, #243040 16%, #243040 20%, #304050 21%, #304050 30%, #243040 31%, #243040 35%, #304050 36%, #304050 45%, #243040 46%, #243040 49%, transparent 50%, transparent),
+    radial-gradient(circle at 0 50%, #243040 5%, #304050 6%, #304050 15%, #243040 16%, #243040 20%, #304050 21%, #304050 30%, #243040 31%, #243040 35%, #304050 36%, #304050 45%, #243040 46%, #243040 49%, transparent 50%, transparent);
+  background-size: 100px 50px;
+}
+
+.tlui-help-menu {
+  display: none !important;
+}
+
+.tlui-debug-panel {
+  display: none !important;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
