@@ -6,7 +6,7 @@ LiminalAI is a powerful tool that transforms your sketches and ideas into fully 
 
 - [App](https://liminalai.app)
 - [Liminal AI Gallery](https://liminalai.app/gallery)
-- [Pump.fun](https://pump.fun)
+- [Pump.fun](https://pump.fun/8fDvZnuDKAuFJbHb7MfUnqLseBuc9B9ahjCQnjyKpump)
 - [X](https://x.com/liminalaisol)
 
 ## 🚀 Features
